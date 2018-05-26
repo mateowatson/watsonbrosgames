@@ -1,0 +1,98 @@
+/* Colors */
+
+$brand_color: #A9C8C3;
+$link_color: #0D7F6E;
+$text_color: #272B2A;
+$light_gray: #DFEDEB;
+$red: #F97272;
+
+/* Fonts */
+
+@font-face{
+    font-family:"Freestyle Script";
+    font-weight: normal;
+    font-style: normal;
+    src:url("../fonts/cc2a7dad-8b0f-4d52-87e9-11eec767e48f.eot?#iefix");
+    src:url("../fonts/cc2a7dad-8b0f-4d52-87e9-11eec767e48f.eot?#iefix") format("eot"),url("../fonts/25c3d96b-7589-4b50-9bbb-f26056979992.woff2") format("woff2"),url("../fonts/be0a036b-61ae-45a1-b709-a8e2e563f7cb.woff") format("woff"),url("../fonts/c2200717-4fb9-4b35-9da1-87c9d6565679.ttf") format("truetype"),url("../fonts/526266d0-7478-41c9-b3dd-aaf0f611a3f8.svg#526266d0-7478-41c9-b3dd-aaf0f611a3f8") format("svg");
+}
+
+@font-face{
+    font-family:"Joanna Nova";
+    font-weight: normal;
+    font-style: normal;
+    src:url("../fonts/07b23fa5-f785-42be-ada6-3474f530df64.eot?#iefix");
+    src:url("../fonts/07b23fa5-f785-42be-ada6-3474f530df64.eot?#iefix") format("eot"),url("../fonts/670d236b-62af-40dc-8652-96b0fe883b10.woff2") format("woff2"),url("../fonts/1af83e9c-e288-4a90-a30f-318742c2f71c.woff") format("woff"),url("../fonts/97d781aa-a278-4413-b61c-35db9a93e283.ttf") format("truetype"),url("../fonts/b98decc5-253e-4b6f-865d-d544d5ceb4ab.svg#b98decc5-253e-4b6f-865d-d544d5ceb4ab") format("svg");
+}
+
+/* !-- Responsive mixins -- */
+
+$tablet-portrait: 600px;
+$tablet-landscape: 900px;
+$desktop: 1200px;
+$big-desktop: 1800px;
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}
+
+@mixin min($point) {
+    @media (min-width: $point) {
+        @content;
+    }
+}
+
+@mixin minmax($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin max($max) {
+    @media (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.sr-only, .assistive-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}
