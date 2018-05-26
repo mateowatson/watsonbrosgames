@@ -1,0 +1,24 @@
+{
+  "name": "watsonbrosgames",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass --output css",
+    "watch": "node-sass --watch sass --output css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://blakewatson@github.com/mateowatson/watsonbrosgames.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mateowatson/watsonbrosgames/issues"
+  },
+  "homepage": "https://github.com/mateowatson/watsonbrosgames#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}

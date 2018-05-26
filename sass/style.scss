@@ -1,0 +1,79 @@
+@import '_normalize';
+@import '_config';
+
+body {
+    font-family: 'Joanna Nova', serif;
+}
+
+.wrapper {
+    padding: 1em;
+}
+
+/* !-- Elements --------------------------------------------- */
+
+a {
+    text-decoration: none;
+    color: $link_color;
+}
+
+/* !-- Header ----------------------------------------------- */
+
+.logo {
+    margin: 2rem auto 0 auto;
+    width: 120px;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.site-description {
+    font-family: 'Freestyle Script', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: $red;
+}
+
+/* !-- Games list ------------------------------------------- */
+
+.games {
+    padding-left: 0;
+    list-style: none;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    img {
+        order: 1;
+        max-width: 100%;
+    }
+}
+
+.game-info {
+    position: relative;
+    order: 2;
+    margin-top: 0.5rem;
+}
+
+.game-title {
+    margin: 0;
+    width: calc(100% - 30px);
+    font-size: 20px;
+}
+
+.github-link {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/github.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
