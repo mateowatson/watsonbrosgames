@@ -386,7 +386,9 @@ a {
   align-items: center;
   margin-bottom: 2rem; }
   .game img {
+    display: block;
     order: 1;
+    border: 1px solid #DFEDEB;
     width: 100%;
     height: auto; }
 
@@ -428,3 +430,10 @@ a {
   .game {
     margin-bottom: 3rem;
     width: calc(33.3333% - 1.5em); } }
+
+/* !-- Site Footer ------------------------------------------ */
+.site-footer {
+  border-top: 6px solid #DFEDEB;
+  padding-top: 0.5em;
+  font-size: 16px;
+  text-align: right; }
