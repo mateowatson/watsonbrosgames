@@ -6,7 +6,15 @@ body {
 }
 
 .wrapper {
+    margin: 0 auto;
     padding: 1em;
+    max-width: 1100px;
+}
+
+@include for-tablet-landscape-up {
+    .wrapper {
+        padding: 2em;
+    }
 }
 
 /* !-- Elements --------------------------------------------- */
@@ -35,6 +43,23 @@ a {
     color: $red;
 }
 
+@include for-tablet-landscape-up {
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 2rem 0;
+        width: 144px;
+    }
+
+    .site-description {
+        font-size: 42px;
+    }
+}
+
 /* !-- Games list ------------------------------------------- */
 
 .games {
@@ -45,11 +70,13 @@ a {
 .game {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 2rem;
 
     img {
         order: 1;
-        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -57,12 +84,14 @@ a {
     position: relative;
     order: 2;
     margin-top: 0.5rem;
+    width: 100%;
 }
 
 .game-title {
     margin: 0;
     width: calc(100% - 30px);
     font-size: 20px;
+    font-weight: normal;
 }
 
 .github-link {
@@ -76,4 +105,25 @@ a {
     background-image: url('../images/github.svg');
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@include for-tablet-portrait-up {
+    .games {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .game {
+        flex-basis: auto;
+        width: calc(50% - 0.5em);
+    }
+}
+
+@include for-tablet-landscape-up {
+    .game {
+        margin-bottom: 3rem;
+        width: calc(33.3333% - 1.5em);
+    }
 }

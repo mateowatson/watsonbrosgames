@@ -337,7 +337,13 @@ body {
   font-family: 'Joanna Nova', serif; }
 
 .wrapper {
-  padding: 1em; }
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 1100px; }
+
+@media (min-width: 900px) {
+  .wrapper {
+    padding: 2em; } }
 
 /* !-- Elements --------------------------------------------- */
 a {
@@ -358,6 +364,17 @@ a {
   text-align: center;
   color: #F97272; }
 
+@media (min-width: 900px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .logo {
+    margin: 2rem 0;
+    width: 144px; }
+  .site-description {
+    font-size: 42px; } }
+
 /* !-- Games list ------------------------------------------- */
 .games {
   padding-left: 0;
@@ -366,20 +383,24 @@ a {
 .game {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 2rem; }
   .game img {
     order: 1;
-    max-width: 100%; }
+    width: 100%;
+    height: auto; }
 
 .game-info {
   position: relative;
   order: 2;
-  margin-top: 0.5rem; }
+  margin-top: 0.5rem;
+  width: 100%; }
 
 .game-title {
   margin: 0;
   width: calc(100% - 30px);
-  font-size: 20px; }
+  font-size: 20px;
+  font-weight: normal; }
 
 .github-link {
   display: block;
@@ -392,3 +413,18 @@ a {
   background-image: url("../images/github.svg");
   background-size: contain;
   background-repeat: no-repeat; }
+
+@media (min-width: 600px) {
+  .games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .game {
+    flex-basis: auto;
+    width: calc(50% - 0.5em); } }
+
+@media (min-width: 900px) {
+  .game {
+    margin-bottom: 3rem;
+    width: calc(33.3333% - 1.5em); } }
