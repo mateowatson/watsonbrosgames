@@ -404,7 +404,7 @@ a {
   font-size: 20px;
   font-weight: normal; }
 
-.github-link {
+.icon-link {
   display: block;
   position: absolute;
   right: 0;
@@ -413,8 +413,16 @@ a {
   width: 20px;
   height: 20px;
   background-image: url("../images/github.svg");
+  background-position: center center;
   background-size: contain;
   background-repeat: no-repeat; }
+
+.codepen-link {
+  transform: translateY(calc(-50% - 2px));
+  background-image: url("../images/codepen.svg"); }
+
+.github-link {
+  background-image: url("../images/github.svg"); }
 
 @media (min-width: 600px) {
   .games {
